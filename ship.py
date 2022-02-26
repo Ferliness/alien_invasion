@@ -8,7 +8,7 @@ class Ship:
         self.image = pygame.image.load('images/ship.bmp')
         self.rect = self.image.get_rect()
         self.screen_rect = game_screen.get_rect()
-        self.rect.centerx = self.screen_rect.centrex
+        self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
         
     def blitme(self) -> None:
