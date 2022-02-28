@@ -13,7 +13,6 @@ def run_game():
     pygame.display.set_caption('Alien Invasion')
     
     player_ship = Ship(game_screen)
-    #TODO size of ship
     
     # Starting the main loop of game.
     while True:
