@@ -18,14 +18,7 @@ def run_game():
     # Starting the main loop of game.
     while True:
         
-        game_func.check_events()
-        
-        # The screen is redrawn on each iteration
-        game_screen.fill(ai_settings.background_color)
-        
-        player_ship.blitme() 
-        
-        # Display the last screen drawn.        
-        pygame.display.flip()
+        game_func.check_events()        
+        game_func.update_screen(ai_settings, game_screen, player_ship)
 
 run_game()
