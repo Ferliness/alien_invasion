@@ -1,19 +1,17 @@
-import sys
-import pygame
-
-from settings import Settings
-from ship import Ship
+import pygame as pg
+import settings as sett
+import ship
 import game_functions as game_func
 
 def run_game():
-    pygame.init()
+    pg.init()
     
-    ai_settings = Settings()
-    game_screen = pygame.display.set_mode(
+    ai_settings = sett.Settings()
+    game_screen = pg.display.set_mode(
         (ai_settings.screen_wigth,ai_settings.screen_height))
-    pygame.display.set_caption('Alien Invasion')
+    pg.display.set_caption('Alien Invasion')
     
-    player_ship = Ship(game_screen)
+    player_ship = ship.Ship(ai_settings, game_screen)
     
     # Starting the main loop of game.
     while True:
